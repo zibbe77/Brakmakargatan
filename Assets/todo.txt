@@ -1,0 +1,5 @@
+- Aseprite-animationer
+- Livmätare
+- Döds- och vinstanimation
+- Instruktioner
+(- Välja slagskämpe?)
