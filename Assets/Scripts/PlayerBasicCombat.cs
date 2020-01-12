@@ -52,7 +52,6 @@ public class PlayerBasicCombat : MonoBehaviour {
             animator.SetTrigger("punch");
             hasReleasedPunchButton = false;
             punchTimer = delayBetweenMoves;
-            print(playerController.controlPrefix + " punch!");
         }
         else if (punchAxisValue <= 0)
         {
