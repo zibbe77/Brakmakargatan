@@ -27,7 +27,7 @@ public class PlayerBasicMovement : MonoBehaviour
     private string verticalAxis;
     private string horizontalAxis;
 
-    private GameObject opponent;
+    
 
     private bool flipped = false;
 
@@ -47,8 +47,6 @@ public class PlayerBasicMovement : MonoBehaviour
 
         horizontalAxis = playerController.HorizontalAxis;
         verticalAxis = playerController.VerticalAxis;
-
-        opponent = GetOpponent();
     }
 
     void Update()
@@ -59,7 +57,7 @@ public class PlayerBasicMovement : MonoBehaviour
 
         CheckHorizontalMovement(horizontalAxisValue);
         CheckJump(verticalAxisValue);
-        CheckMirrored(opponent);
+        CheckMirrored(GetComponent<PlayerController>().Opponent.gameObject);
     }
 
 
@@ -116,20 +114,7 @@ public class PlayerBasicMovement : MonoBehaviour
 
     }
 
-    public GameObject GetOpponent()
-    {
-        GameObject[] candidates = GameObject.FindGameObjectsWithTag("Player");
 
-        foreach(GameObject candidate in candidates)
-        {
-            if (candidate != this.gameObject)
-            {
-                return candidate;
-            }
-        }
-
-        return this.gameObject;
-    }
 
     public void DoJump()
     {

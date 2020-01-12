@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 114657121343748414}
   - component: {fileID: 114901721853307534}
   - component: {fileID: 114137587942138418}
+  - component: {fileID: 2873020845636030208}
   m_Layer: 0
   m_Name: FighterPrefab
   m_TagString: Player
@@ -220,6 +221,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95507643937904492}
   delayBetweenMoves: 0.5
+--- !u!114 &2873020845636030208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662706771249036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eed5305151cb3d42a5fe584ffe9f756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &1667311407380046
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4861436427480540}
   - component: {fileID: 61688426103611812}
+  - component: {fileID: 1300333752563425920}
   m_Layer: 0
   m_Name: PunchCollider
   m_TagString: Punch
@@ -277,6 +292,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.88, y: 0.37}
   m_EdgeRadius: 0
+--- !u!114 &1300333752563425920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667311407380046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775b0a39e35f5ed48a4903070e21352e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1828743367032186
 GameObject:
   m_ObjectHideFlags: 0

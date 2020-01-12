@@ -5,6 +5,41 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    [SerializeField]
+    string fighterName;
+
+    [SerializeField]
+    PlayerController opponent;
+    
+    public PlayerController Opponent
+    {
+        private set
+        {
+            opponent = value;
+        }
+        get
+        {
+            return opponent;
+        }
+    }
+
+    private void Start()
+    {
+        Opponent = FindOpponent();
+    }
+
+    public string FighterName
+    {
+        private set
+        {
+            fighterName = value;
+        }
+        get
+        {
+            return fighterName;
+        }
+    }
+
     public string controlPrefix = "P1";
 
     public string VerticalAxis
@@ -41,5 +76,20 @@ public class PlayerController : MonoBehaviour
         {
             return controlPrefix + "Fire2";
         }
+    }
+
+    public PlayerController FindOpponent()
+    {
+        GameObject[] candidates = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (GameObject candidate in candidates)
+        {
+            if (candidate != this.gameObject)
+            {
+                return candidate.GetComponent<PlayerController>();
+            }
+        }
+
+        return this;
     }
 }
