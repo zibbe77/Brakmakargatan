@@ -109,6 +109,14 @@ public class PlayerBasicMovement : MonoBehaviour
             workingScale.x *= -1;
             spriteObject.transform.localScale = workingScale;
 
+            Collider2D[] colliders = GetComponents<Collider2D>();
+            foreach(Collider2D collider in colliders)
+            {
+                Vector2 offset = collider.offset;
+                offset.x *= -1;
+                collider.offset = offset;
+            }
+
             flipped = !flipped;
         }
 
