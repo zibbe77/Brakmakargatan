@@ -52,8 +52,8 @@ public class FramingController : MonoBehaviour
         Vector3 midPoint = CharacterMidpoint();
 
         transform.position = new Vector3(
-            midPoint.x* (cameraFollowX? 1 : 0),
-            (midPoint.y + verticalOffset) * (cameraFollowY? 1 : 0),
+            midPoint.x * (cameraFollowX ? 1 : 0),
+            (midPoint.y + verticalOffset) * (cameraFollowY ? 1 : 0),
             transform.position.z
             );
     }
@@ -77,6 +77,7 @@ public class FramingController : MonoBehaviour
 
     Vector3 CharacterMidpoint()
     {
+
         return (player1.gameObject.transform.position + player2.gameObject.transform.position) * 0.5f;
     }
 
